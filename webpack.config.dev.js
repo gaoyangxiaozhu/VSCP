@@ -33,9 +33,9 @@ module.exports = {
     ],
     loaders: [
       { test: /\.vue$/,loader: 'vue', include: path.join(__dirname, 'src')},
-      { test: /\.scss$/, loader: ExtractTextPlugin.extract(['css', 'sass?sourceMap']), include: path.join(__dirname, 'src')},
+      { test: /\.scss$/, loader: ExtractTextPlugin.extract(['css?sourceMap&-minimize', 'autoprefixer-loader', 'sass?sourceMap']), include: path.join(__dirname, 'src')},
       { test: /\.js$/, loader: 'babel', exclude: /node_modules|vue\/dist|vue-hot-reload-api|vue-router\/|vue-loader/},
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap' ) },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', ['css-loader?sourceMap', 'autoprefixer-loader']) },
       { test: /\.(jpe?g|png|gif)$/i, loaders: [
         'url?limit=10000&name=images/[hash:8].[name].[ext]',
         'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}'
@@ -46,7 +46,9 @@ module.exports = {
   // vue-loader configurations
   vue: {
     loaders: {
-      js: 'babel!eslint'
+      js: 'babel!eslint',
+      css: ExtractTextPlugin.extract("css"),
+      sass: ExtractTextPlugin.extract("css!sass")
     }
   },
   eslint: {

@@ -1,0 +1,62 @@
+-- -----------------------------------------
+-- Author Gyy
+-- start mysql and using commond `source /path/createTABLES.txt` for create table  
+-- -----------------------------------------
+
+
+-- ----------------------
+-- Create Users table
+-- ----------------------
+CREATE TABLE Users
+(
+  user_id     int  NOT NULL,
+  user_name   char(50)  NOT NULL,
+  user_pwd    char(50)  NOT NULL
+);
+
+-- ----------------------
+-- Create Videotasks table
+-- ----------------------
+CREATE TABLE Videotasks
+(
+  pod_id       char(50)  NOT NULL,
+  con_id       char(50)  NOT NULL,
+  user         int  NOT NULL,
+  task_type    int  NOT NULL,
+  percent      char(10)  NOT NULL DEFAULT "0%",
+  status       char(20)  NOT NULL,
+  start_time   datetime  NOT NULL,
+  end_time     datetime  NOT NULL,
+  channel      int       NOT NULL
+);
+
+-- -----------------------
+-- Create Videoservices table
+-- -----------------------
+CREATE TABLE Videoservices
+(
+  v_id    int      NOT NULL,
+  v_type  char(50) NOT NULL
+);
+
+-- -------------------
+-- Define primary keys
+-- -------------------
+ALTER TABLE Users ADD PRIMARY KEY (user_id);
+ALTER TABLE Videotasks ADD PRIMARY KEY (pod_id);
+ALTER TABLE Videoservices ADD PRIMARY KEY (v_id);
+
+-- -------------------
+-- Add auto increment
+-- -------------------
+ALTER TABLE Users MODIFY user_id int AUTO_INCREMENT;
+ALTER TABLE Videoservices MODIFY v_id int AUTO_INCREMENT;
+
+-- -------------------
+-- Define foreign keys
+-- -------------------
+ALTER TABLE Videotasks ADD CONSTRAINT FK_VIDEOTASK_USER FOREIGN KEY (user) REFERENCES Users (user_id);
+ALTER TABLE Videotasks ADD CONSTRAINT FK_VIDEOTASK_TYPE FOREIGN KEY (task_type) REFERENCES Videoservices (v_id);
+
+
+

@@ -1,0 +1,102 @@
+@import
+
+    '../mixin',
+    '../variable';
+
+//navbar
+.navbar,
+.navbar-box{
+    margin-top: 40px;
+    height: $navbarHeight;
+    min-height: $navbarHeight;
+
+    background-color: $navbarBgColor;
+    border: 0px;
+    overflow: hidden;
+
+}
+.navbar-brand, .navbar-nav{
+    float: left;
+    position: relative;
+    @extend .clearfix;
+}
+.navbar-brand{
+    margin-right: 40px;
+    cursor: pointer;
+    .icon-brand{
+        position: relative;
+        top: -20px;
+        > i{
+            color: rgb(117, 174, 176);
+        }
+    }
+}
+.navbar-nav{
+    > li{
+        float:left;
+        margin-right: 30px;
+        > a{
+            color: $navbarLinkColor;
+            font-size: 18px;
+            padding: 16px 0 2px;
+
+            &:hover,
+            &:focus,
+            &:active{
+                background-color: transparent;
+            }
+
+            &:after{
+                content:"";
+                display: block;
+
+                position: absolute;
+                bottom: -2px;
+                width: 0;
+                height: 0px;
+                border-bottom: 2px solid #000;
+                transition: width ease .2s;
+            }
+            &.active{
+                &,
+                &:hover,
+                &:focus,
+                &:active{
+                    font-weight: 700px;
+                    color: $navbarLinkHoverColor;
+                }
+                &:after{
+                    width: 100%;
+                }
+            }
+        }
+        &.active{
+            a,
+            a:hover,
+            a:focus,
+            a:active{
+                font-weight: 700px;
+                color: $navbarLinkHoverColor;
+            }
+            a:after{
+                width: 100%;
+            }
+        }
+
+    }
+}
+.navbar-expanded{
+    float: right;
+}
+.navbar-item{
+    &.login{
+        color: #000;
+        border-radius: 30px;
+        padding: 16px 30px;
+        border: 1px solid rgba(0, 0, 0, 0.20);
+        transition: all 0.2s;
+        &:hover{
+            border: 1px solid rgba(0, 0, 0, 0.70);
+        }
+    }
+}

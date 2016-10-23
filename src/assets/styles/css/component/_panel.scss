@@ -1,0 +1,27 @@
+@import
+
+    '../mixin',
+    '../variable';
+    
+.panel{
+    margin-bottom: 20px;
+    background-color: $basePanelBgColor;
+    border: 1px solid transparent;
+    border-radius: 0;
+    .panel-body{
+        padding: 15px;
+    }
+    .panel-page-header,
+    .primary-section {
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $defaultBorderColor;
+
+    }
+    .primary-section,
+    .secondary-section{
+        p{
+            color: $baseFontColor;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@import
+
+    '../mixin',
+    '../variable';
+
+
+.table,
+table {
+    width: 100%;
+    background-color: $tableBgColor;
+}
+.table-striped {
+    tbody > tr:nth-of-type(odd) {
+      background-color: $tableBgAccentColor;
+    }
+}
+.table{
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+         > th {
+            text-align: left;
+            font-size: 14px;
+            padding: 10px;
+            font-weight: 400;
+            &.text-center{
+                text-align: center;
+            }
+
+        }
+         > td {
+            color: $tableFontColor;
+            white-space: nowrap;
+            word-break: break-all;
+            padding: 25px 10px;
+            vertical-align: middle;
+        }
+      }
+    }
+}
+.table-bordered, .table-responsive{
+    border-color: $tableBorderColor;
+}
+
+.table,
+table{
+    > thead{
+        border: 1px solid $tableBorderColor;
+        > tr{
+            > th{
+                border: 1px solid transparent;
+                border-bottom: 1px solid $tableBorderColor;
+                color : $tableTitleColor;
+            }
+        }
+
+    }
+    > tbody {
+        background-color: white;
+        border: 1px solid $tableBorderColor;
+        > tr{
+            border-bottom: 1px solid $tableBorderColor;
+            border-top: 1px solid $tableBorderColor;
+
+            &:hover{
+                background-color: $tableBgHoverColor;
+            }
+            &.selected{
+                background-color: $tableSelectedBgColor;
+            }
+            > td{
+                border: 1px;
+            }
+        }
+    }
+}
+
+
+.table-toolbar{
+    height: 60px;
+}
+
+.table{
+    > tbody{
+        > tr{
+            > td{
+                &:first-child{
+                    padding-left: 40px;
+                }
+                &.checkbox{
+                    min-width: 50px;
+                    width: 50px;
+                    display: table-cell;
+                    margin: 0;
+                    div{
+                        height: 100%;
+                    }
+                    input[type="checkbox"]{
+                        position: relative;
+                        margin:0;
+                    }
+                }
+                .item-success{
+                    color : #22c36a;
+                }
+            }
+        }
+    }
+    //for image tag
+    .item-tag{
+        color: $baseFontColor;
+        font-size: 13px;
+        margin-top: 4px;
+    }
+}
+
+.table,
+table {
+    width: 100%;
+    background-color: $tableBgColor;
+}
+.table-striped {
+    tbody > tr:nth-of-type(odd) {
+      background-color: $tableBgAccentColor;
+    }
+}

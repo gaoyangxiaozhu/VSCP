@@ -1,0 +1,10 @@
+@import
+
+    '../mixin',
+    '../variable';
+    
+select,
+select:active,
+select:focus{
+    outline: 0 !important;
+}

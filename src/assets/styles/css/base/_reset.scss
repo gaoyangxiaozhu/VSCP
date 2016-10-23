@@ -1,0 +1,48 @@
+body,
+body.vscp{
+    background-color: $baseBgColor;
+    font-family: "open_sans", "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+body,
+body.vscp,
+p{
+    font-size: 16px;
+    color: $baseFontColor;
+
+    margin-bottom: 20px;
+
+}
+
+h1,
+h2,
+h3,
+h4{
+    color: $titleFontColor;
+}
+h1,
+h2{
+    font-size: 24px;
+    font-weight: 500;
+}
+h3,
+h4{
+    font-size: 18px;
+    font-weight: 500px;
+}
+ul,
+ol{
+    list-style: none;
+    padding-left: 0;
+    li{
+        list-style: none;
+    }
+}
+a{
+    &,
+    &:focus,
+    &:active,
+    &:hover{
+        text-decoration: none;
+        cursor: pointer;
+    }
+}

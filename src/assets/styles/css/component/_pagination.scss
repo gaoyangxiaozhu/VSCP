@@ -1,0 +1,90 @@
+@import
+
+    '../mixin',
+    '../variable';
+
+.pagination {
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    padding: 0 6px;
+    overflow: hidden;
+    border-radius: 0;
+
+    > a,
+    > span,
+    > li > a,
+    > li > span,
+    > div > a,
+    > div > span{
+        display:  inline-block;
+
+        background-color: $paginationBgColor;
+        border: 1px solid $paginationBorderColor;
+        color: $paginationColor;
+        border-radius: 0;
+
+        cursor: pointer;
+    }
+    // page button group style
+    > li {
+        > a,
+        > span{
+            border-radius: 4px;
+        }
+      &:first-child,
+      &:last-child{
+          > a,
+          > span{
+              border-radius: 0;
+          }
+      }
+
+    }
+    // page prev next style
+    > div{
+        &.prev{
+            float: left;
+        }
+        &.next{
+            float: right;
+        }
+        > a,
+        > span{
+            padding: 8px 14px;
+            border-radius: 4px;
+        }
+    }
+    > .active > a,
+    > .active > span {
+      &{
+          background-color: $paginationBgColor;
+          border: 1px solid $paginationBorderColor;
+          color: $paginationColor;
+      }
+      &:hover,
+      &:focus,
+      &:active{
+          background-color: $paginationActiveBgColor;
+          border-color: $paginationActiveBorderColor;
+          color: $paginationActiveColor;
+
+          cursor: pointer;
+      }
+    }
+    > .disabled {
+        > span,
+        > span:hover,
+        > span:focus,
+        > a,
+        > a:hover,
+        > a:focus,
+        > a:active{
+            background-color: $paginationDisableBgColor;
+            border-color:$paginationDisableBorderColor;
+            color: $paginationDisableBorderColor;
+
+            cursor: pointer;
+      }
+    }
+}

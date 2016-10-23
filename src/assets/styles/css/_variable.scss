@@ -1,0 +1,88 @@
+
+//global
+$baseYellowColor: #E8C060;
+$baseRedColor: #EA9078;
+$baseGreenColor: #65C3AD;
+$baseDeepRedColor: #DC6B6B;
+
+$baseFontColor : #999999;     //默认段落字体颜色
+$titleFontColor : #656D78;    //默认标题字体颜色
+$textMutedColor: #777; //默认柔色字体
+$dangerColor: #e74c3c; //text-danger 字体
+
+$baseBgColor : #FFFFFF;        //默认网站背景颜色 #f6f6f6
+$baseBorderColor : #d9d9d9;    //默认的边框颜色
+
+$basePanelBgColor : white;     //默认面板背景颜色
+
+$linkBaseColor : #8B4EA4;        //链接颜色#337ab7
+$linkBaseHoverColor : #6A1A8B; //链接悬浮颜色
+$linkTitleColor : #555;        //标题链接颜色
+
+
+$linkTitleHoverColor : black;  //标题链接悬浮颜色
+$linkLightColor : #4094c7;     //高亮链接颜色
+$linkLightHoverColor : #075b8d;//高亮链接悬浮颜色
+
+//msg
+$defaultMsgBgColor: #F5BBBB; //默认的消息提示span的背景色
+$defaultMsgColor: #895810; //默认的msg消息提醒的span的字体颜色
+
+
+/************navbar*************/
+//color
+$navBgColor: #3e474e;
+$navBdColor: #f49484;
+$navHoverColor: $linkLightHoverColor;
+$navHoverBgColor: darken($navBgColor, 3%);
+$navActiveBgColor: darken($navBgColor, 7%);
+
+$navbarBgColor:#FFFFFF;
+$navbarLinkColor: #b9b9b9;
+$navbarLinkHoverColor: #000;
+//other
+$navbarHeight:80px;
+/***********end-navbar*************/
+
+//btn
+$defaultBtnColor: #ecf0f1;
+$defaultBtnBdColor: #ccd1d9; //默认的btn的边框颜色
+$primaryBtnColor: #5faee3;
+$greenBtnColor: #2ecc71;
+$blueBtnColor: #4E85F3;
+
+
+//input
+$defaultInputHeight : 33px; //默认input大小
+
+//border
+$defaultBorderColor : #EAE9E9;  //#e6e9ed;
+
+
+//form relate
+ $formColor: #555;
+ $formBdColor:#ddd;
+ $formBgColor: #fff;
+
+
+$defaultFontSize : 16px;    //默认字体大小
+
+
+//default table
+$tableTitleColor: #9ba3af;
+$tableBgColor:  white;
+$tableSelectedBgColor: #fffced;
+$tableBgAccentColor : #fff;
+$tableBgHoverColor :  rgba(245,247,250, .8);
+$tableBgActiveColor : $tableBgColor;
+$tableBorderColor :  #e4e7ed;
+$tableFontColor : #595f69;
+
+$paginationBgColor : #fff;
+$paginationBorderColor : #9eabb3;
+$paginationColor: #9eabb3;
+$paginationActiveBgColor :#fff;
+$paginationActiveBorderColor : darken(#9eabb3, 20%);
+$paginationActiveColor: darken(#9eabb3, 20%);
+$paginationDisableBgColor: $baseBgColor;
+$paginationDisableBorderColor: $baseBorderColor;

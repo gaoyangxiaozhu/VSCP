@@ -1,0 +1,20 @@
+@import
+
+    '../mixin',
+    '../variable';
+    
+
+input,
+.input-group-addon, .form-control{
+   color: $formColor;
+   background-color: $formBgColor;
+   border:1px solid $formBdColor;
+   height: $defaultInputHeight;
+   line-height: 1.42857
+}
+.input-group-addon{
+   border-right: 0;
+}
+input[type="radio"], input[type="checkbox"]{
+    margin: -5px 0 0;
+}

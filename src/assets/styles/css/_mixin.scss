@@ -1,0 +1,11 @@
+
+//共用内容容器
+@mixin public-box($mediaWidth:700px){
+  width:100%;
+  margin: 0 auto;
+  padding: 20px 10px 10px $navbarSize + 12px;
+  @media (min-width: $screen-sm-min){
+      width:$mediaWidth;
+      padding: 0 0 10px  $navbarSize + 12px;
+  }
+}

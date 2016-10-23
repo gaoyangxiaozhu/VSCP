@@ -1,0 +1,15 @@
+@import
+
+    '../mixin',
+    '../variable';
+
+.well {
+    border-radius: 1px;
+}
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: lighten($baseBgColor, 5%);
+    border: 1px solid $defaultBorderColor;
+}

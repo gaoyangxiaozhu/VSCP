@@ -36,7 +36,7 @@
             </div>
         </div>
         <div v-if="!$loadingRouteData">
-            <Pagination :options="options" :more="isMore"></Pagination>
+            <Pagination routename="videoStorageList" :options="options" :more="isMore"></Pagination>
         </div>
         <div class="loading" v-if="$loadingRouteData & showLoading">
             <span></span>

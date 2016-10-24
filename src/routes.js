@@ -27,7 +27,16 @@ export default function (router) {
         },
         '/compute':{
             name: 'videoCompute',
-            component: require('./components/VideoCompute/index.vue')
+            component: require('./components/VideoCompute/index.vue'),
+            subRoutes: {
+                '/':{
+                    component: require('./components/VideoCompute/computeList.vue')
+                },
+                '/list/:chanId/:year/:month/:day':{
+                    name: 'videoComputeList',
+                    component: require('./components/VideoCompute/computeList.vue')
+                }
+            }
         },
         '*': {
             component: require('./components/NotFound.vue')

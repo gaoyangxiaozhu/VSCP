@@ -8,6 +8,7 @@ $baseDeepRedColor: #DC6B6B;
 $baseFontColor : #999999;     //默认段落字体颜色
 $titleFontColor : #656D78;    //默认标题字体颜色
 $textMutedColor: #777; //默认柔色字体
+$textGreenColor: darken(#65C3AD, 20%);
 $dangerColor: #e74c3c; //text-danger 字体
 
 $baseBgColor : #FFFFFF;        //默认网站背景颜色 #f6f6f6
@@ -67,6 +68,8 @@ $defaultBorderColor : #EAE9E9;  //#e6e9ed;
 
 $defaultFontSize : 16px;    //默认字体大小
 
+//toolbar
+$toolbarHeight:40px;
 
 //default table
 $tableTitleColor: #9ba3af;

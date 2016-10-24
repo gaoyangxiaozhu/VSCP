@@ -1,0 +1,28 @@
+.toolbar{
+    display: block;
+    min-height: $toolbarHeight;
+    height: $toolbarHeight;
+
+    margin: 15px 0;
+
+    overflow: hidden;
+
+    > div{
+        float: left;
+        &:first-child{
+            margin-left: 0;
+        }
+        button,
+        .btn{
+            margin-top: 2px;
+        }
+    }
+
+    > div:not(.checkbox, .radio){
+
+        margin-left: 10px;
+        height: 100%;
+        line-height: $toolbarHeight;
+    }
+
+}

@@ -5,7 +5,7 @@
                     <Slidebar :camera-list="cameraList" :year="year" :month="month"  :day="day" :chan-id="chanId"></Slidebar>
                 </div>
                 <div class="col-xs-9">
-                    <router-view></router-view>
+                    <router-view :checked-list="checkedVList"></router-view>
                 </div>
             </div>
     </div>
@@ -22,6 +22,10 @@ import Slidebar from '../Slidebar/index.vue'
 const today = new Date()
 export default {
     components: { Loginmodal, Scrolltop, Slidebar },
+    created(){
+        // checkedVList do not need reactive to dom change
+        this.checkedVList = []
+    },
     computed:{
         chanId: {
             get(){
@@ -124,6 +128,10 @@ export default {
                     page: options.currentPage || options.page || 1
                 }
             })
+        },
+        startVideoJob(){
+            //TODO
+            console.log('start job')
         }
     },
     vuex:{

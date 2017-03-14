@@ -1,0 +1,8 @@
+#!/bin/bash
+node server.js &
+if [ $? -eq 0 ];then
+    npm run start
+else
+    echo 'start node server.js fail...'
+    exit 1
+fi
